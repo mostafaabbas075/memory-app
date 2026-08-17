@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory App</title>
+</head>
+
+<body>
+
+  <h1>Memory App</h1>
+
+  <p>Save something you want to remember.</p>
+
+  <input
+    type="text"
+    placeholder="Enter your knowledge"
+  >
+
+  <button>Save</button>
+
+</body>
+</html>

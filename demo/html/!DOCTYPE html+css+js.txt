@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 20px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #16a34a;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Memory App</h1>
+
+    <p>
+      Save something you want to remember.
+    </p>
+
+    <input
+      id="knowledgeInput"
+      type="text"
+      placeholder="Enter your knowledge"
+    >
+
+    <button id="saveButton">
+      Save
+    </button>
+
+    <p id="message"></p>
+
+  </div>
+
+  <script>
+    const input = document.getElementById("knowledgeInput");
+    const button = document.getElementById("saveButton");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", function () {
+
+      const knowledge = input.value.trim();
+
+      if (!knowledge) {
+        message.textContent = "Please enter some knowledge.";
+        message.style.color = "#dc2626";
+        return;
+      }
+
+      message.textContent = "Knowledge entered: " + knowledge;
+      message.style.color = "#16a34a";
+
+      input.value = "";
+    });
+  </script>
+
+</body>
+</html>
